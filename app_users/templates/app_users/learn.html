@@ -1,0 +1,76 @@
+{% extends 'base.html'  %}
+{% load static %}
+{%block title %}Activities{% endblock%}
+
+{% block image_block%}
+
+{%endblock%}
+
+{% block content %}
+
+<main class="mt-5">
+    <section class="text-center">
+                  <h2 class="mb-5 font-weight-bold" style="color:rgb(209, 150, 22);">Learn Here</h2>
+                  <!-- class row for description-->
+                  <div class="row d-flex justify-content-center mb-4">
+                    <!-- class column -->
+                    <div class="col-md-8">
+                      <p class="grey-text">Pick your class to access learning materials and assistance from coordinators.</p>
+                    </div>
+                  </div>
+                  <!-- class row2 for cards -->
+                  <div class="row">
+                          {% for standard in standards %}
+                          <div class="col-md-4 d-flex mb-5 justify-content-center">
+                            <div class="card text-center" style="width: 18rem;">
+                              <div class="card-body">
+                                <h4 class="card-title" style="color:rgb(209, 150, 22);">{{standard.name}}</h4>
+                                <p class="card-text">{{standard.description|truncatechars:75}}</p>
+                                {% if user.is_authenticated %}
+                                <a href="{% url 'curriculum:subject_list' slug=standard.slug %}" class="btn btn-primary" style="background-color:#00bcd4;">Start Learning</a>
+                                {%else%}
+                                <p>Register or login to start learning</p>
+                                <a href="{% url 'user_login' %}" class="btn btn-primary" style="background-color:#00bcd4;">Login</a>
+                                <a href="{% url 'register' %}" class="btn btn-primary" style="background-color:#00bcd4;">Register</a>
+                                {%endif%}
+                              </div>
+                            </div>
+                          </div>
+                          {% endfor %}
+                  </div>
+    </section>
+    <hr class="my-5" style="color:rgb(209, 150, 22);">
+    <!-- Section 2: Faculty Members -->
+
+    <section class="text-center">
+      <h2 class="mb-5 font-weight-bold" style="color:rgb(209, 150, 22);">Teaching Stuff</h2>
+      <div class="row d-flex justify-content-center mb-4">
+          <div class="col-md-8">
+            <p class="grey-text">Here are our teachers who strive towards the success of our students.</p>
+          </div>
+          <div class="row d-flex justify-content-center mb-3">
+          {% for teacher in teachers %}
+          <div class="card mb-3 mr-5 ml-3" style="max-width: 500px;">
+            <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="{{teacher.profile_pic.url|default_if_none:'#'}}" class="card-img" alt="No image found">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title" style="color:rgb(209, 150, 22);">{{teacher.user.username}}</h5>
+                          <p class="card-text">{{teacher.bio|truncatechars:75}}</p>
+                          <p class="card-text"><small class="text-muted"></small></p>
+                        </div>
+                      </div>
+            </div>
+            </div>
+          {% endfor %}
+          </div>
+      </div>
+    </section>
+
+    <hr class="my-5" style="color:rgb(209, 150, 22);">
+ 
+</main>
+
+{%endblock%}
