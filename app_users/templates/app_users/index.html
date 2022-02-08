@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}olbutyo girls{% endblock %}
+
+{% block content %}
+<div id="banner" class="mt-5">
+  <h1>Olbutyo Girls' High School</h1>
+  <h3>motto</h3>
+</div>
+<main class="container shadow">
+  <div class="text-center">
+    <h2 class="h1-responsive">About Us</h2>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. At adipisci quod necessitatibus iusto corporis neque, dolore deserunt, soluta, eos nisi dolorum vel provident ducimus eum? Explicabo voluptatum rerum at doloremque.</p>
+  </div>
+
+  <div>
+
+    <div class="justify-content-center">
+
+
+      <a href="{% url 'learn' %}"> <button type="button" class="btn btn-primary justify-content-center"
+          style="color:rgb(221, 231, 231);border-color:rgb(209, 150, 22);">Learn Here</button> </a>
+
+    </div>
+    <section class="my-5 bg-dark text-light">
+
+      <!-- Section heading -->
+      <h2 class="h1-responsive font-weight-bold text-center my-5 text-info" id="activities">Activities</h2>
+      <!-- Section description -->
+      <p class="lead grey-text text-center w-responsive mx-auto mb-5">As Olbutyo, we not only focus on acedemics but
+        aslo participate in co-curricular activites.</p>
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-4 mb-md-0 mb-5">
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-lg-2 col-md-3 col-2">
+              <i class="fas fa-book-open blue-text fa-2x"></i>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-lg-10 col-md-9 col-10">
+              <h4 class="font-weight-bold">Academics</h4>
+
+              {% load static %}
+              <img src="{% static 'Images/comlab.jpg' %}" class="img-fluid" alt="academics">
+
+              <!-- {% load static %}<img src="{% static "Images/olb.jpg" %}" class="img-fluid" alt="academics" /> -->
+              <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <a class="btn btn-primary btn-sm">Learn more</a>
+            </div>
+            <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 mb-md-0 mb-5">
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-lg-2 col-md-3 col-2">
+              <i class="fas fa-volleyball-ball purple-text fa-2x"></i>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-lg-10 col-md-9 col-10">
+              <h4 class="font-weight-bold">Sports</h4>
+              {% load static %}
+              <img src="{% static 'Images/lab.jpg' %}" class="img-fluid" alt="Sports">
+              <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <a class="btn btn-yellow btn-sm">Learn more</a>
+            </div>
+            <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4">
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-lg-2 col-md-3 col-2">
+              <i class="fas fa-theater-masks blue-text fa-2x"></i>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-lg-10 col-md-9 col-10">
+              <h4 class="font-weight-bold">Music And Drama</h4>
+
+              {% load static %}
+              <img src="{% static 'Images/lab.jpg' %}" class="img-fluid" alt="Music and Drama">
+
+              <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <a class="btn btn-purple btn-sm">Learn more</a>
+            </div>
+            <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+
+        </div>
+        <!-- Grid column -->
+
+
+        <!-- Grid row -->
+
+    </section>
+  </div>
+  <h2 class="h1-responsive font-weight-bold text-info text-center">KCSE Performance</h2>
+  <section id="container">
+    <table class="table">
+      <thead>
+        <tr class="table-info shadow">
+          <th scope="col" class="text-success lead">Year</th>
+          <th scope="col" class="text-info lead">Mean</th>
+          <th scope="col" class="text-primary lead">University</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-light">
+          <th scope="row">2020</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-secondary">
+          <th scope="row">2019</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row">2018</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-danger">
+          <th scope="row">2017</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">2016</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <!-- Section: Testimonials v.2 -->
+<section class="text-center my-5">
+
+  <!-- Section heading -->
+  <h2 class="h1-responsive font-weight-bold my-5">Messages</h2>
+
+  <div class="wrapper-carousel-fix">
+    <!-- Carousel Wrapper -->
+    <div id="carousel-example-1" class="carousel no-flex testimonial-carousel slide carousel-fade" data-ride="carousel"
+      data-interval="false">
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+        <!--First slide-->
+        <div class="carousel-item active">
+          <div class="testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto mb-4">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).webp" class="rounded-circle img-fluid"
+                alt="First sample avatar image">
+            </div>
+            <!--Content-->
+            <p>
+              <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+              eos
+              id officiis hic tenetur quae quaerat ad velit ab. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Dolore cum accusamus eveniet molestias voluptatum inventore laboriosam labore
+              sit, aspernatur praesentium iste impedit quidem dolor veniam.
+            </p>
+            <h4 class="font-weight-bold">Phelisters</h4>
+            <h6 class="font-weight-bold my-3">Principal</h6>
+          </div>
+        </div>
+        <!--First slide-->
+        <!--Second slide-->
+        <div class="carousel-item">
+          <div class="testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto mb-4">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).webp" class="rounded-circle img-fluid"
+                alt="Second sample avatar image">
+            </div>
+            <!--Content-->
+            <p>
+              <i class="fas fa-quote-left"></i> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+              odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
+              porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
+              non numquam eius modi tempora incidunt ut labore. </p>
+            <h4 class="font-weight-bold">Dp</h4>
+            <h6 class="font-weight-bold my-3">Deputy Principal</h6>
+          </div>
+        </div>
+        <!--Second slide-->
+        <!--Third slide-->
+        <div class="carousel-item">
+          <div class="testimonial">
+            <!--Avatar-->
+            <div class="avatar mx-auto mb-4">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).webp" class="rounded-circle img-fluid"
+                alt="Third sample avatar image">
+            </div>
+            <!--Content-->
+            <p>
+              <i class="fas fa-quote-left"></i> Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+              error sit voluptatem accusantium doloremque laudantium.</p>
+            <h4 class="font-weight-bold">Mr Bett</h4>
+            <h6 class="font-weight-bold my-3">DOS</h6>
+            
+          </div>
+        </div>
+        <!--Third slide-->
+      </div>
+      <!--Slides-->
+      <!--Controls-->
+      <a class="carousel-control-prev left carousel-control" href="#carousel-example-1" role="button"
+        data-slide="prev">
+        <span class="icon-prev" aria-hidden="true"></span>
+        <span class="sr-only ">Previous</span>
+      </a>
+      <a class="carousel-control-next right carousel-control" href="#carousel-example-1" role="button"
+        data-slide="next">
+        <span class="icon-next" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <!--Controls-->
+    </div>
+    <!-- Carousel Wrapper -->
+  </div>
+
+</section>
+<!-- Section: Testimonials v.2 -->
+
+</main>
+{% endblock %}
