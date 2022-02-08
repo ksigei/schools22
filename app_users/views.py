@@ -37,8 +37,8 @@ def user_logout(request):
 
 
 # Create your views here.
-# def index(request):
-#     return render(request,'app_users/index.html')
+def index(request):
+    return render(request,'app_users/index.html')
 
 def register(request):
 
@@ -113,3 +113,6 @@ class CourseView(TemplateView):
 
 class EventView(TemplateView):
     template_name = 'app_users/events.html'
+
+class BlogView(TemplateView):
+    template_name = 'blog.html'
