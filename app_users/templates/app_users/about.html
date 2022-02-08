@@ -11,23 +11,17 @@
                 <div class="col-lg-5">
                     <div class="section-title mt-50">
                         <h5>About us</h5>
-                        {% for title in  titles %}
-                        <h2> {{ title.title }} </h2>
-                        {% endfor %}
+                        
+                        <h2> <title></title> </h2>
+                        
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris. <br> <br> auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris</p>
+                        <p>To be an icon of world class girls school by maintaining high academic standards and nurturing integrity and leadership.</p>
                     </div>
                 </div> <!-- about cont -->
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
-                        <!-- <img src="{% static 'images/about/about-2.png' %}" alt="About"> -->
-                        {% for img in images %}  
-                            <tr>
-                                <td>{{img.title}}</td>
-                                <td><img src="/{{ BASIC_DIR }}/{{img.img}}" width="120"/></td>
-                            </tr>
-	                    {% endfor %} 
+                        <img src="{% static 'images/about/about-2.jpg' %}" alt="About">
                     </div>  <!-- about imag -->
                 </div> 
             </div> <!-- row -->
@@ -36,22 +30,36 @@
                     <div class="col-lg-4 col-md-6 col-sm-10">
                         <div class="about-singel-items mt-30">
                             <span>01</span>
-                            <h4>Why Choose us</h4>
-                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit sollicitudirem quibibendum auci</p>
+                            <h4>Motto:</h4>
+                            <p>Strive to shine</p>
                         </div> <!-- about singel -->
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-10">
                         <div class="about-singel-items mt-30">
                             <span>02</span>
-                            <h4>Our Mission</h4>
-                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit sollicitudirem quibibendum auci</p>
+                            <h4>Mission</h4>
+                            <p>To be an icon of world class girls school by maintaining high academic standards and nurturing integrity and leadership.</p>
                         </div> <!-- about singel -->
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-10">
                         <div class="about-singel-items mt-30">
                             <span>03</span>
-                            <h4>Our vission</h4>
-                            <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit sollicitudirem quibibendum auci</p>
+                            <h4>vission</h4>
+                            <p>To strive to help nurturesuccess in academic and inculcate life skills in them.</p>
+                        </div> <!-- about singel -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <div class="about-singel-items mt-30">
+                            <span>04</span>
+                            <h4>Core Values</h4>
+                            <li>Excellence</li>
+                            <li>Integrity</li>
+                            <li>Team spirit</li>
+                            <li>Discipline</li>
+                            <li>Leadership</li>
+                            <li>Honesty</li>
+                            <li>Dedication</li>
+                            
                         </div> <!-- about singel -->
                     </div>
                 </div> <!-- row -->
