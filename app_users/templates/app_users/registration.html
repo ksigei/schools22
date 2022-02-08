@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bootstrap5 %}
 {% load crispy_forms_tags %}
 {% block title %}Sign Up{% endblock %}
 
 {% block image_block %}
+{% bootstrap_form form %}
 <header class="info-header">
   <div id="page-intro" class="container-fluid d-flex align-items-center justify-content-center ">
     <div class="row d-flex justify-content-center text-center">

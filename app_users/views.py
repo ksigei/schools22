@@ -114,5 +114,5 @@ class CourseView(TemplateView):
 class EventView(TemplateView):
     template_name = 'app_users/events.html'
 
-class BlogView(TemplateView):
-    template_name = 'blog.html'
+class Post_detailView(TemplateView):
+    template_name = 'baseblog.html'

@@ -16,5 +16,5 @@ urlpatterns = [
     path('about/', views.AboutView.as_view(), name="about"),
     path('courses/', views.CourseView.as_view(), name="courses"),
     path('events/', views.EventView.as_view(), name="events"),
-    path('blog/', views.BlogView.as_view(), name="blog"),
+    path('post_detail/', views.Post_detailView.as_view(), name="post_detail"),
 ]
