@@ -436,9 +436,21 @@ p {
 
 /*===== Header Logo support =====*/
 
-.header-logo-support{
+/* .header-logo-support{
     border-bottom: 1px solid #cecece;
-}
+} */
+.logo img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #555;
+  }
+  
+  .logo h1 {
+    position: relative;
+    top: 18px;
+    left: 10px;
+  }
 
 .support-button{}
 .support-button .support {
@@ -3783,22 +3795,3 @@ p.form-message.error {
 .contact-address .contact-heading h5{
 	padding-bottom: 15px;
 }
-
-/* retained --- from blogs*/
-.container{
-    max-width: 768px;
-    width: 100%;
-}
-article img{
-    max-width: 100% !important;
-    height: auto !important;
-    border-radius: .25rem!important;
-}
-.featured-image-list{
-    object-fit: cover;
-}
-
-
-
-
-
