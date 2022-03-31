@@ -23,7 +23,7 @@
       <div class="header-logo-support pt-30 pb-30">
           <div class="container">
               <div class="row">
-                  <div class="col-lg-4 col-md-4">
+                  <div class="">
                       <div class="logo">
                           <a href="{% url 'about' %}">
                               <img src="{% static 'images/logo.png' %}" alt="Logo">
@@ -93,6 +93,12 @@
                                           
                                       </ul>
                                   </li>
+                                  <li class="nav-item">
+                                    <a href="{% url 'home:dept_list' %}">Depts</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'home:dept_list' %}">Depts</a></li>
+                                    </ul>
+                                </li>
                                   <li class="nav-item">
                                       <a href="{%  url  'learn'  %}">Our teachers</a>
                                       <ul class="sub-menu">

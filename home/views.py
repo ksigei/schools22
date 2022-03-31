@@ -1,26 +1,28 @@
-from django.shortcuts import render,redirect
-from django.views.generic import TemplateView
-from django.http import HttpResponse, HttpResponseRedirect
-from django.urls import reverse
-from django.views.generic import CreateView
+from django.shortcuts import render, get_object_or_404
+from django.views.generic import (TemplateView, DetailView,
+                                    ListView, CreateView,
+                                    UpdateView,DeleteView,FormView,)
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.urls import reverse_lazy
+from django.http import HttpResponseRedirect
+from .models import Department
 
-# Create your views here.
+def dept_list(request):
+    departments = Department.published.all()
+    
+    paginator = Paginator(departments, 10) # 10 departments in each page
+    page = request.GET.get('page')
+    try:
+        departments = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer deliver the first page
+        departments = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range deliver last page of results
+        departments = paginator.page(paginator.num_pages)
+        
+    return render(request,'home/dept_list.html',{'departments':departments, page:'pages'})
 
-class AboutView(TemplateView):
-   template_name = 'app_users/about.html'
-
-
-class DepartmentsView(TemplateView):
-    template_name = 'home/departments.html'
-
-class GalleryView(TemplateView):
-    template_name = 'home/gallery.html'
-  
-class ActivitiesView(TemplateView):
-    template_name = 'home/activities.html'
-
-class EventsView(TemplateView):
-    template_name = 'home/events.html'
-
-class CoursesView(TemplateView):
-    template_name = 'home/courses.html'
+def dept_detail(request, department):
+    department=get_object_or_404(Department,slug=department,status='published')
+    return render(request, 'home/dept_detail.html',{'department':department})
