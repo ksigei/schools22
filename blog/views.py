@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post
 from django.views.generic import (TemplateView, DetailView,
                                     ListView, CreateView,
                                     UpdateView,DeleteView,FormView,)
@@ -7,12 +6,6 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
 from .models import Post
-
-
-
-
-
-
 
 
 def post_list(request):
@@ -33,5 +26,5 @@ def post_list(request):
 
 def post_detail(request, post):
     post=get_object_or_404(Post,slug=post,status='published')
-    return render(request, 'blog/post_detail.html',{'post':post})
+    return render(request, 'post_detail.html',{'post':post})
 

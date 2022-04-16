@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block content %} {% for department in departments %}
+<section id="event-page" class="pt-90 pb-120 gray-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="olbutyogirls-event-list mt-30">
+          <div class="event-thum">
+            <img
+              src="{{ department.image.url }}"
+              class="rounded featured-image-list"
+              alt="{{department.title}}"
+            />
+          </div>
+          <div class="event-cont" id="blog">
+            <a href="{{ department.get_absolute_url }}"
+              ><h4 class="text-primary">{{ department.title }}</h4></a
+            >
+
+            <small class="text-muted">
+              Published {{ department.publish.date }} by
+              <strong>{{ department.author }}</strong>
+            </small>
+
+            <p id="more">
+              {{ department.body|safe|striptags|truncatechars:100 }}
+            </p>
+
+            <a class="btn btn-primary btn-sm" onclick="showMore()">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endfor %} {% include "pagination.html" with page=departments %}
+ {% endblock content %}

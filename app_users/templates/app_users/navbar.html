@@ -10,8 +10,8 @@
                   <div class="col-lg-6">
                       <div class="header-contact text-lg-left text-center">
                           <ul>
-                              <li><img src="{% static 'images/all-icon/map.png' %}" alt="icon"><span>P.O. BOX 488 Bomet, Kenya</span></li>
-                              <li><img src="{% static 'images/all-icon/email.png' %}" alt="icon"><span>info@olbutyogirls.sc.ke</span></li>
+                              <li> <i class="fa fa-envelope" aria-hidden="true"></i><span>P.O. BOX 488 Bomet, Kenya</span></li>
+                              <li> <i class="fa fa-envelope" aria-hidden="true"></i><span>info@olbutyogirls.sc.ke</span></li>
                           </ul>
                       </div>
                   </div>
@@ -20,10 +20,10 @@
           </div> <!-- container -->
       </div> <!-- header top -->
       
-      <div class="header-logo-support pt-30 pb-30">
+      {% comment %} <div class="header-logo-support pt-30 pb-30">
           <div class="container">
               <div class="row">
-                  <div class="col-lg-4 col-md-4">
+                  <div class="">
                       <div class="logo">
                           <a href="{% url 'about' %}">
                               <img src="{% static 'images/logo.png' %}" alt="Logo">
@@ -49,7 +49,7 @@
                   </div>
               </div> <!-- row -->
           </div> <!-- container -->
-      </div> <!-- header logo support -->
+      </div> <!-- header logo support --> {% endcomment %}
       
       <div class="navigation">
           <div class="container">
@@ -93,6 +93,12 @@
                                           
                                       </ul>
                                   </li>
+                                  {% comment %} <li class="nav-item">
+                                    <a href="{% url 'home:dept_list' %}">Depts</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'home:dept_list' %}">Depts</a></li>
+                                    </ul>
+                                </li> {% endcomment %}
                                   <li class="nav-item">
                                       <a href="{%  url  'learn'  %}">Our teachers</a>
                                       <ul class="sub-menu">
